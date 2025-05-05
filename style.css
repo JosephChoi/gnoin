@@ -11,11 +11,50 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 600px;
+.header {
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
-    min-height: 100vh;
+}
+
+.logo-left {
+    height: 60px;
+    width: auto;
+    flex: 1;
+}
+
+.logo-right {
+    height: 25px;
+    width: auto;
+    flex: 1;
+    text-align: right;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: center;
+    flex: 3;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: calc(100vh - 130px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,52 +63,82 @@ body {
 #quiz-container, #result-container {
     background-color: white;
     border-radius: 10px;
-    padding: 30px;
+    padding: 30px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 h1 {
     color: #2c3e50;
     margin-bottom: 30px;
+    font-size: 2.2rem;
 }
 
 #question {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.8;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    padding: 0 10px;
+    word-break: keep-all;
+    white-space: pre-line;
+    text-align: center;
+    font-weight: 500;
 }
 
 .btn-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .btn {
-    padding: 15px 40px;
-    font-size: 1.5rem;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 2.6rem;
     font-weight: bold;
     border: none;
-    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #btn-o {
-    background-color: #2ecc71;
+    background-color: #1E4BBC;
     color: white;
 }
 
 #btn-x {
-    background-color: #e74c3c;
+    background-color: #E63E31;
     color: white;
+}
+
+#btn-o::after {
+    content: "맞으면";
+    font-size: 1rem;
+    position: absolute;
+    bottom: -30px;
+    color: #333;
+}
+
+#btn-x::after {
+    content: "틀리면";
+    font-size: 1rem;
+    position: absolute;
+    bottom: -30px;
+    color: #333;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .btn:active {
@@ -82,7 +151,7 @@ h1 {
 }
 
 #result-image-container {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #result-image {
@@ -93,43 +162,279 @@ h1 {
 }
 
 #result-message {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin: 30px 0;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #2c3e50;
+    word-break: keep-all;
+    white-space: pre-line;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: 500;
 }
 
 #btn-retry {
     background-color: #3498db;
     color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    width: auto;
+    height: auto;
+    display: inline-block;
 }
 
 .hidden {
     display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .logo-left {
+        height: 50px;
+    }
+    
+    .logo-right {
+        height: 20px;
+    }
+    
+    .site-title {
+        font-size: 1.3rem;
+    }
+    
+    .header {
+        padding: 10px 15px;
+    }
+    
     .container {
         padding: 15px;
     }
     
-    #quiz-container, #result-container {
-        padding: 20px;
-    }
-    
     h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 2rem;
     }
     
     #question {
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     
     .btn {
-        padding: 12px 30px;
-        font-size: 1.2rem;
+        width: 120px;
+        height: 120px;
+        font-size: 2.4rem;
     }
+    
+    #result-message {
+        font-size: 1.6rem;
+    }
+    
+    .btn-result {
+        padding: 12px 20px;
+        font-size: 1.3rem;
+    }
+    
+    .result-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #quiz-container, #result-container {
+        padding: 25px 15px 40px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    #question {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+        padding: 0 5px;
+    }
+    
+    .btn {
+        width: 110px;
+        height: 110px;
+        font-size: 2.2rem;
+    }
+    
+    .logo-left {
+        height: 40px;
+    }
+    
+    .logo-right {
+        height: 15px;
+    }
+    
+    .site-title {
+        font-size: 1.1rem;
+    }
+    
+    .btn-container {
+        gap: 30px;
+    }
+    
+    #result-message {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .btn-result {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* 추가 모바일 최적화 */
+@media (max-width: 480px) {
+    .logo-left {
+        height: 35px;
+    }
+    
+    .logo-right {
+        height: 12px;
+    }
+    
+    .site-title {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    #question {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    
+    .btn {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+    
+    #result-message {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+    
+    .btn-container {
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .btn-result {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+        width: 90%;
+    }
+}
+
+/* 모바일 가로 모드 최적화 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        min-height: auto;
+        padding: 10px;
+    }
+    
+    #quiz-container, #result-container {
+        padding: 20px 15px 35px;
+    }
+    
+    .header {
+        padding: 8px 10px;
+    }
+    
+    h1 {
+        margin-bottom: 15px;
+    }
+    
+    #question {
+        margin-bottom: 20px;
+    }
+    
+    .btn-container {
+        margin-top: 20px;
+    }
+    
+    .btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+    }
+    
+    #btn-o::after, #btn-x::after {
+        bottom: -25px;
+        font-size: 0.9rem;
+    }
+    
+    .result-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .btn-result {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+        width: auto;
+    }
+}
+
+.btn-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn-result {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.btn-result:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-result:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#btn-retry-same {
+    background-color: #e67e22;
+}
+
+#btn-retry-new {
+    background-color: #3498db;
 } 
