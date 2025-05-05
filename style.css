@@ -114,12 +114,12 @@ h1 {
 }
 
 #btn-o {
-    background-color: #E63E31;
+    background-color: #2ecc71;
     color: white;
 }
 
 #btn-x {
-    background-color: #1E4BBC;
+    background-color: #e67e22;
     color: white;
 }
 
@@ -128,7 +128,7 @@ h1 {
     font-size: 1rem;
     position: absolute;
     bottom: -30px;
-    color: #E63E31;
+    color: #2ecc71;
     font-weight: bold;
 }
 
@@ -137,7 +137,7 @@ h1 {
     font-size: 1rem;
     position: absolute;
     bottom: -30px;
-    color: #1E4BBC;
+    color: #e67e22;
     font-weight: bold;
 }
 
