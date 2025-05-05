@@ -128,7 +128,8 @@ h1 {
     font-size: 1rem;
     position: absolute;
     bottom: -30px;
-    color: #333;
+    color: #E63E31;
+    font-weight: bold;
 }
 
 #btn-x::after {
@@ -136,7 +137,8 @@ h1 {
     font-size: 1rem;
     position: absolute;
     bottom: -30px;
-    color: #333;
+    color: #1E4BBC;
+    font-weight: bold;
 }
 
 .btn:hover {
