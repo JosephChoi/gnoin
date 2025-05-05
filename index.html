@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX 퀴즈게임</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-container">
+            <h1>OX 퀴즈</h1>
+            <div id="question"></div>
+            <div class="btn-container">
+                <button id="btn-o" class="btn">O</button>
+                <button id="btn-x" class="btn">X</button>
+            </div>
+        </div>
+        
+        <div id="result-container" class="hidden">
+            <div id="result-image-container">
+                <img id="result-image" src="" alt="결과 이미지">
+            </div>
+            <div id="result-message"></div>
+            <button id="btn-retry" class="btn">다른 문제 풀기</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
