@@ -31,6 +31,9 @@ body {
     height: 60px;
     width: auto;
     flex: 1;
+    object-fit: contain;
+    object-position: left;
+    max-width: 150px;
 }
 
 .logo-right {
@@ -191,6 +194,7 @@ h1 {
 @media (max-width: 768px) {
     .logo-left {
         height: 50px;
+        max-width: 125px;
     }
     
     .logo-right {
@@ -267,6 +271,7 @@ h1 {
     
     .logo-left {
         height: 40px;
+        max-width: 100px;
     }
     
     .logo-right {
@@ -298,6 +303,7 @@ h1 {
 @media (max-width: 480px) {
     .logo-left {
         height: 35px;
+        max-width: 90px;
     }
     
     .logo-right {
